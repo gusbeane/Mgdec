@@ -84,7 +84,7 @@ Using the public catalog, we selected a sample of subhalos at $z=1.5$ (snapshot 
 We examined the abundance distribution in the \MgFe{}-\FeH{} plane of this sample of subhalos by eye. Not many subhalos had multimodal structure, and any structure that was present was relatively weak compared to that observed in the Milky Way. We then applied a post-processing to the \MgFe{} of stars by adding to each star particle a value of $0.1\times\left(t_{1.5}-t_{\textrm{form}}\right)$, where $t_{1.5}$ is the age of the universe at $z=1.5$ ($\sim4.3\,\Gyr$) and $t_{\textrm{form}}$ is the formation time of each star particle. With this post-processing, we found that much more structure was generally present. We selected subhalo 172175 (at snapshot 40) for its particular resemblance to the Milky Way. We then studied the main descendant of this subhalo at $z=0$ (subhalo 392276 at snapshot 99). We refer to this subhalo as our subhalo of interest (SoI).
 
 \subsection{Observations}\label{ssec:obs}
-We make use of two observational data sets. First, we use the ASPCAP DR17 catalog of stellar abundances \citep[][J.A.~Holtzman et al., in preparation]{2016AJ....151..144G}. We make the same selection cuts as in \citet{2024arXiv240707985B}, described in their Section~2.4. These are meant to select only giants with high quality abundance measurements as well as restricting the sample to only stars in the disk with angular momenta similar to the Sun's. This results in a sample of 54,777 stars. We use Fe to track total metallicity and Mg alone as an $\alpha$-element \red{TODO: add any additional details}.
+We make use of two observational data sets. First, we use the ASPCAP DR17 catalog of stellar abundances \citep[][J.A.~Holtzman et al., in preparation]{2016AJ....151..144G}. We make the same selection cuts as in \citet{2024arXiv240707985B}, described in their Section~2.4. These are meant to select only giants with high quality abundance measurements as well as restricting the sample to only stars in the disk with angular momenta similar to the Sun's. This results in a sample of 54,777 stars. We use Fe to track total metallicity and Mg alone as an $\alpha$-element.
 
 We then further considered a dataset of stellar ages from the APOKASC2 catalog \citep{2018ApJS..239...32P}. This uses a combination of APOGEE spectroscopic parameters and \textit{Kepler} time series photometry to compute astroseismic ages. We cross-match this catalog to our larger sample from ASPCAP which results in a sample of 1868 stars.
 
@@ -120,7 +120,7 @@ The abundance distributions shown in Figure~\ref{fig:fig1} can be better underst
 
 There is a gap in the ages that occurs at an age of $10.75\,\Gyr$, which we mark with a vertical dashed line. Star particles older than this line have a much clearer gradient in time with \MgFe{} than stars that form after. In the $\FeH=-0.25$ bin, star particles which form directly after this line have a slightly depressed \MgFe{} than stars which form a short time later.
 
-In the lower panels we plot to the left data from the Milky Way and to the middle and right from the fiducial and $\alpha$-enhanced SoI, respectively. For the simulations, we add $15\%$ age and $0.01\,\dex$ \MgFe{} Gaussian errors. These values are roughly in line with the observational errors from the APOKASC2 and APOGEE datasets that the lower left panel is made from (see Appendix~\ref{app:errors} for plots of the observational errors). The error in \MgFe{} is not signficant, but the age error, which is $1\,\Gyr$ at $10\,\Gyr$, smears out the distribution before and after the dashed line. The $\alpha$-enhanced SoI still shows two separate populations in this plot, but they now significantly overlap in age.
+In the lower panels we plot to the left data from the Milky Way and to the middle and right from the fiducial and $\alpha$-enhanced SoI, respectively. For the simulations, we add $15\%$ age and $0.01\,\dex$ \MgFe{} Gaussian errors. These values are roughly in line with the observational errors from the APOKASC2 and APOGEE datasets that the lower left panel is made from (see Appendix~\ref{app:obs_err} for plots of the observational errors). The error in \MgFe{} is not signficant, but the age error, which is $1\,\Gyr$ at $10\,\Gyr$, smears out the distribution before and after the dashed line. The $\alpha$-enhanced SoI still shows two separate populations in this plot, but they now significantly overlap in age.
 
 The Milky Way distribution (lower left panel) bears some resemblance to the $\alpha$-enhanced SoI. In particular, the $\FeH=-0.5$ and $-0.25$ bins (blue and orange, respectively) show what appears to be two populations overlapping in age but nonetheless separated in \MgFe{}. These are the bins at which the bimodality is strongest (upper left panel of Figure~\ref{fig:fig1}).
 
@@ -203,5 +203,16 @@ This work has made use of data from the European Space Agency (ESA) mission {\it
 \bibliography{ref}{}
 \bibliographystyle{aasjournal}
 
-% \input{src/app.tex}
+\appendix
+
+\section{Observational Errors}\label{app:obs_err}
+In Figure~\ref{fig:alpha}, we assumed observational errors of $15\%$ in age and $0.01\,\dex$ in \MgFe{}. In Figure~\ref{fig:obs_err}, we plot the quoted observational errors of the APOKASC2 (left) and ASPCAP (right) datasets, showing both \FeH{} and \MgFe{} (blue and orange, respectively). We show our $15\%$ age error and $0.01\,\dex$ abundance error assumptions as black lines. For the age error, we used the maximum of the upper and lower estimates from \citet{2018ApJS..239...32P}. Our assumed errors are generally consistent with the errors. Our error in \MgFe{} is a bit smaller than in ASPCAP, but the age estimates are by far the more constraining of the two.
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\columnwidth]{fig/obs_error.pdf}
+  \caption{The observational errors of the APOKASC2 (left) and ASPCAP dataset (right). We show, on the left, a line indicating a $15\%$ error in observed age and on the right a vertical line indicating a $0.01\,\dex$ error.}
+  \label{fig:obs_err}
+\end{figure*}
+
 \end{document}
