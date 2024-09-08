@@ -17,6 +17,7 @@
 \newcommand{\Myr}{\ensuremath{\textrm{Myr}}}
 \newcommand{\yr}{\ensuremath{\textrm{yr}}}
 \newcommand{\kpc}{\ensuremath{\textrm{kpc}}}
+\newcommand{\ckpc}{\ensuremath{\textrm{ckpc}}}
 \newcommand{\pc}{\ensuremath{\textrm{pc}}}
 \newcommand{\kms}{\ensuremath{\textrm{km}/\textrm{s}}}
 \newcommand{\tocite}{\textcolor{blue}{cite}}
@@ -149,6 +150,27 @@ The lower panel shows the virial mass of the subhalo, as measured by $M_{200}$ -
 We show the evolution of the SoI in greater detail at the transition between the high- and low-$\alpha$ sequences in Figure~\ref{fig:history_zoom}. As in Figure~\ref{fig:history} we indicate the SFR (blue) and black hole accretion rate (orange), but we also include the strength of the bar, taken to be the maximum value of $A_2$, in red. From $\sim2.8\,\Gyr$ to $\sim3.2\,\Gyr$, the SFR drops from $\sim54\,\Msunyr$ to $3.6\,\Gyr$. The minimum in the SFR is nearly coincident with the transition line.
 
 We can see more clearly here that the BH accretion rate (red), in units of the Eddington accretion rate, increases from a value of $\sim0.08$ at $\sim2.8\,\Gyr$ to a maximum of $\sim0.3$ at $\sim3.1\,\Gyr$, right before the transition. This rise in the AGN accretion rate is preceded by a strengthening of the bar, which rises from an $A_2$ of $\sim0.1$ at $t\sim2.4\,\Gyr$ to an $A_2$ of $\sim0.5$ at $\sim3.1\,\Gyr$, the time of the peak BH accretion rate.
+
+\subsection{Images}\label{ssec:images}
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/images_star.pdf}
+  \caption{Surface density projections of star particles in our SoI at the transition between the high- and low-$\alpha$ sequences. Each panel indicates subsequent snapshots ranging from snapshot 23 ($z\sim3.5$) to snapshot 36 ($z\sim1.7$), as well as snapshot 99 ($z=0$) in the lower right. Several key numbers are shown in the corners of each panel, clockwise from the top left: SFR, time, bar strength ($A_{2,\textrm{max}}$), and BH accretion rate. A guide is given in the top left subpanel. At the center-bottom of each panel, we indicate panels which occur before the transition ($\sim3.2\,\Gyr$) as high-$\alpha$ and panels which occur after as low-$\alpha$.}
+  \label{fig:images_star}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/images_gas.pdf}
+  \caption{As in Figure~\ref{fig:images_star}, but showing the surface density projections of gas in our SoI at the transition between the high- and low-$\alpha$ sequences. Each panel indicates subsequent snapshots ranging from snapshot 23 ($z\sim3.5$) to snapshot 36 ($z\sim1.7$), as well as snapshot 99 ($z=0$) in the lower right. Several key numbers are shown in the corners of each panel, clockwise from the top left: SFR, time, gas fraction, and BH accretion rate. A guide is given in the top left subpanel. At the center-bottom of each panel, we indicate panels which occur before the transition ($\sim3.2\,\Gyr$) as high-$\alpha$ and panels which occur after as low-$\alpha$.}
+  \label{fig:images_gas}
+\end{figure*}
+
+In order to better conceptualize the evolution of the SoI at the high- to low-$\alpha$ transition, we show surface density projections of the stellar (Figure~\ref{fig:images_star}) and gaseous (Figure~\ref{fig:images_gas}) phases of the progenitors of our SoI at various redshifts. In addition to the final, $z=0$, snapshot in the lower right, we show panels for snapshots 23 to 36 in which $z$ ranges from $\sim3.5$ to $\sim1.7$ and the cosmic time from $\sim1.81$ to $\sim3.74\,\Gyr$. Projections are made on a $256\times256$ grid of a $25\,\kpc$ by $25\,\kpc$ square. All star particles/gas cells within ten times the stellar half-mass radius are used, and a simple nearest neighbor assignment of mass to each cell is used. Colors range logarithmically from $5\times10^{-4}$ to $0.5$ in native units ($10^{10} h M_{\odot} \ckpc^{-2}$).
+
+We also show four relevant statistics in each panel of Figures~\ref{fig:images_star} and \ref{fig:images_gas}. For Figure~\ref{fig:images_star}, these are, clockwise from the upper left, the SFR, cosmic time, bar strength, and BH accretion rate. They are the same for Figure~\ref{fig:images_gas}, but bar strength is replaced with gas fraction (within twice the stellar half-mass radius).
+
+A description of the events portrayed in each Figure is given in Section~\ref{ssec:cause_qui}.
 
 \subsection{One-Zone Model}\label{ssec:onezone}
 
