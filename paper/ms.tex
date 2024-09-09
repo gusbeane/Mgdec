@@ -28,6 +28,7 @@
 \newcommand{\tform}{\ensuremath{t_{\textrm{form}}}}
 \newcommand{\dex}{\ensuremath{\textrm{dex}}}
 \newcommand{\Msunyr}{\ensuremath{\Msun/\textrm{yr}}}
+\newcommand{\Atmax}{\ensuremath{A_{2,\textrm{max}}}}
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
@@ -147,7 +148,7 @@ The lower panel shows the virial mass of the subhalo, as measured by $M_{200}$ -
   \label{fig:history_zoom}
 \end{figure}
 
-We show the evolution of the SoI in greater detail at the transition between the high- and low-$\alpha$ sequences in Figure~\ref{fig:history_zoom}. As in Figure~\ref{fig:history} we indicate the SFR (blue) and black hole accretion rate (orange), but we also include the strength of the bar, taken to be the maximum value of $A_2$, in red. From $\sim2.8\,\Gyr$ to $\sim3.2\,\Gyr$, the SFR drops from $\sim54\,\Msunyr$ to $3.6\,\Gyr$. The minimum in the SFR is nearly coincident with the transition line.
+We show the evolution of the SoI in greater detail at the transition between the high- and low-$\alpha$ sequences in Figure~\ref{fig:history_zoom}. As in Figure~\ref{fig:history} we indicate the SFR (blue) and black hole accretion rate (orange), but we also include the strength of the bar, taken to be the maximum value of $A_2$, in red. From $\sim2.8\,\Gyr$ to $\sim3.2\,\Gyr$, the SFR drops from $\sim54$ to $3.6\,\Msunyr$. The minimum in the SFR is nearly coincident with the transition line.
 
 We can see more clearly here that the BH accretion rate (red), in units of the Eddington accretion rate, increases from a value of $\sim0.08$ at $\sim2.8\,\Gyr$ to a maximum of $\sim0.3$ at $\sim3.1\,\Gyr$, right before the transition. This rise in the AGN accretion rate is preceded by a strengthening of the bar, which rises from an $A_2$ of $\sim0.1$ at $t\sim2.4\,\Gyr$ to an $A_2$ of $\sim0.5$ at $\sim3.1\,\Gyr$, the time of the peak BH accretion rate.
 
@@ -168,7 +169,7 @@ We can see more clearly here that the BH accretion rate (red), in units of the E
 
 In order to better conceptualize the evolution of the SoI at the high- to low-$\alpha$ transition, we show surface density projections of the stellar (Figure~\ref{fig:images_star}) and gaseous (Figure~\ref{fig:images_gas}) phases of the progenitors of our SoI at various redshifts. In addition to the final, $z=0$, snapshot in the lower right, we show panels for snapshots 23 to 36 in which $z$ ranges from $\sim3.5$ to $\sim1.7$ and the cosmic time from $\sim1.81$ to $\sim3.74\,\Gyr$. Projections are made on a $256\times256$ grid of a $25\,\kpc$ by $25\,\kpc$ square. All star particles/gas cells within ten times the stellar half-mass radius are used, and a simple nearest neighbor assignment of mass to each cell is used. Colors range logarithmically from $5\times10^{-4}$ to $0.5$ in native units ($10^{10} h M_{\odot} \ckpc^{-2}$).
 
-We also show four relevant statistics in each panel of Figures~\ref{fig:images_star} and \ref{fig:images_gas}. For Figure~\ref{fig:images_star}, these are, clockwise from the upper left, the SFR, cosmic time, bar strength, and BH accretion rate. They are the same for Figure~\ref{fig:images_gas}, but bar strength is replaced with gas fraction (within twice the stellar half-mass radius).
+We also show four relevant statistics in each panel of Figures~\ref{fig:images_star} and \ref{fig:images_gas}. For Figure~\ref{fig:images_star}, these are, clockwise from the upper left, the SFR, cosmic time, bar strength, and BH accretion rate. They are the same for Figure~\ref{fig:images_gas}, but bar strength is replaced with gas fraction (within twice the stellar half-mass radius). The bar strength is missing from several snapshots. This is because the catalog we pull \Atmax{} from excludes certain galaxies from being considered barred if they do not pass certain quality cuts \citep{2022MNRAS.515.1524Z}. These can come from, e.g., flybys or violent buckling events.
 
 A description of the events portrayed in each Figure is given in Section~\ref{ssec:cause_qui}.
 
@@ -216,7 +217,18 @@ S. Hassan et al. (in preparation) demonstrated that the pressure regulated feedb
 The lower left panel of Figure~\ref{fig:alpha} shows the \MgFe{} vs age of stars in bins of \FeH{} which pass our solar neighborhood selection and are present in the APOKASC2 catalog. In the bins where the bimodality is strongest (blue and orange, $\FeH=-0.5$ and $-0.25$, respectively), we see that there is a sort of two tiered distribution with significant overlap in age. In the SoI with age and abundance errors shown in the lower right panel, a very similar distribution can be seen in all \FeH{} bins. An examination of the true distribution in the SoI (upper right panel), we see that the two distributions are in fact very cleanly separated in age. We do not know the true underlying distribution in the Milky Way, but these panels show that the general picture shown in our SoI is consistent with the Milky Way.
 
 \subsection{Cause of Quiescence}\label{ssec:cause_qui}
-It is natural to question why the minimum in the SFR occurs. In \citet{2024arXiv240707985B}, AGN activity from a merger was the suspected cause. Here, we can see that there is indeed a brief burst in AGN accretion at the time of the merger (middle panel of Figure~\ref{fig:history}). Establishing a causal relationship between the two is beyond the scope of the present work, though it is the same suspected cause as in \citet{2024arXiv240707985B}.
+% We show the evolution of the SoI in greater detail at the transition between the high- and low-$\alpha$ sequences in Figure~\ref{fig:history_zoom}. As in Figure~\ref{fig:history} we indicate the SFR (blue) and black hole accretion rate (orange), but we also include the strength of the bar, taken to be the maximum value of $A_2$, in red. From $\sim2.8\,\Gyr$ to $\sim3.2\,\Gyr$, the SFR drops from $\sim54\,\Msunyr$ to $3.6\,\Msunyr$. The minimum in the SFR is nearly coincident with the transition line.
+
+% We can see more clearly here that the BH accretion rate (red), in units of the Eddington accretion rate, increases from a value of $\sim0.08$ at $\sim2.8\,\Gyr$ to a maximum of $\sim0.3$ at $\sim3.1\,\Gyr$, right before the transition. This rise in the AGN accretion rate is preceded by a strengthening of the bar, which rises from an $A_2$ of $\sim0.1$ at $t\sim2.4\,\Gyr$ to an $A_2$ of $\sim0.5$ at $\sim3.1\,\Gyr$, the time of the peak BH accretion rate.
+
+
+It is natural to question why the minimum in the SFR occurs. In \citet{2024arXiv240707985B}, AGN activity from a merger was the suspected cause. Here, we can see that there is indeed a brief burst in AGN accretion at the time of the merger (middle panel of Figure~\ref{fig:history}). Based on this burst, it is reasonable to suspect that AGN activity is also responsible for the quiescent period in our SoI. However, we argue that the cause of the localized spike in the BH accretion rate is not due to a merger but instead due to the formation/strengthening of a bar.
+
+In Figure~\ref{fig:history_zoom}, we take a closer view of the evolution of our SoI at the transition between the high- and low-$\alpha$ sequence, which we denote with the same line at an age of $10.6\,\Gyr$ ($t\sim3.2\,\Gyr$) as before. Here, we see that indeed the drop in the SFR ( $\sim3.6\,\Msunyr$ at $t\sim3.3\,\Gyr$) reaches a minimum one snapshot after the maximum in the BH accretion rate ($\sim0.3\times\dot{M_{\textrm{edd}}}$ at $t\sim3.1\,\Gyr$).
+
+The gaseous surface density images in Figure~\ref{fig:images_gas} are helpful to understand this moment in the SoI's history. The third row, from $t=2.84$ to $3.28\,\Gyr$ shows this moment, with the rightmost $t=3.28\,\Gyr$ marking the transition from high- to low-$\alpha$ formation. The gas fraction (bottom right number) quickly drops from $25\%$ to $3\%$, accompanied by not only a high SFR ($54.3\,\Msunyr$ at maximum) but also an increasing BH accretion rate.
+
+This increasing BH accretion rate is also preceded by the formation of a stellar bar at the center of the galaxy as seen in Figure~\ref{fig:images_star}.\footnote{The bar is already at a strength of $\Atmax\sim0.1$ before, so it either forms or strengthens depending on one's interpretation. We choose the former.} Starting from $t=2.38\,\Gyr$, the bar strength grows from $\Atmax=0.1$ to $0.5$ at $t=3.13\,\Gyr$, the peak of the BH accretion rate. Note that the bar strength considers only the region where the phase of the second Fourier mode is constant, and so spiral structure as seen in, e.g., the $t=2.38\,\Gyr$ snapshot is not eligible for \Atmax{}.
 
 % \subsection{Full Sample}\label{ssec:fullsamp}
 
