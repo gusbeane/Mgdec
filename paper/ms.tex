@@ -85,7 +85,11 @@ One piece of the TNG model of note for this work is the BH accretion and feedbac
 
 Using the public catalog, we selected a sample of subhalos at $z=1.5$ (snapshot 40) according to the following criteria: (1) the subhalo is central (i.e., the most massive subhalo within its halo), and (2) the subhalo's stellar mass is between $10^{10}$ and $10^{10.5}\,\Msun/\textrm{h}$. There were a total of 168 subhalos that met both criteria. The chosen mass range is broadly consistent with the expected mass of the Milky Way at this redshift \citep{2013ApJ...771L..35V}. We chose to make our selection of galaxies at $z=1.5$ instead of at lower redshift because we wished to capture the \textit{formation} of any multimodal structure. We did not want contamination by mergers at lower redshift which we know contribute very little to the Milky Way's disk stars \citep[e.g.,][]{2016ARA&A..54..529B}.
 
-We examined the abundance distribution in the \MgFe{}-\FeH{} plane of this sample of subhalos by eye. Not many subhalos had multimodal structure, and any structure that was present was relatively weak compared to that observed in the Milky Way. We then applied a post-processing to the \MgFe{} of stars by adding to each star particle a value of $0.1\times\left(t_{1.5}-t_{\textrm{form}}\right)$, where $t_{1.5}$ is the age of the universe at $z=1.5$ ($\sim4.3\,\Gyr$) and $t_{\textrm{form}}$ is the formation time of each star particle. With this post-processing, we found that much more structure was generally present. We selected subhalo 172175 (at snapshot 40) for its particular resemblance to the Milky Way. We then studied the main descendant of this subhalo at $z=0$ (subhalo 392276 at snapshot 99). We refer to this subhalo as our subhalo of interest (SoI).
+We examined the abundance distribution in the \MgFe{}-\FeH{} plane of this sample of subhalos by eye. Not many subhalos had multimodal structure, and any structure that was present was relatively weak compared to that observed in the Milky Way. We then applied a post-processing to the \MgFe{} of stars by adding to each star particle a value of $0.1\times\left(t_{1.5}-t_{\textrm{form}}\right)$, where $t_{1.5}$ is the age of the universe at $z=1.5$ ($\sim4.3\,\Gyr$) and $t_{\textrm{form}}$ is the formation time of each star particle. With this post-processing, we found that much more structure was generally present.
+
+We show the abundance distributions (replicating Figure~\ref{fig:fig1}) of 16 random subhalos from our catalog, and the subhalo we selected, in Appendix~\ref{app:rand_fig1}. Of these subhalos, some structure is present, but none have a strong bimodality as seen in the Milky Way. After the $\alpha$-enhancement, a few have strongly bimodal features (subject to interpretation): 172175, 178140, 193025.
+
+We selected subhalo 172175 (the ID at snapshot 40) for its particular resemblance to the Milky Way. We then studied the main descendant of this subhalo at $z=0$ (subhalo 392276 at snapshot 99). We refer to this subhalo as our subhalo of interest (SoI).
 
 \subsection{Bar Catalog}\label{ssec:barcat}
 In order to study the evolution of the morphology of our SoI, we make use of the \citet{2022MNRAS.515.1524Z} catalog. They provide a decomposition of all galaxies with at least $10^4$ star particles, as well as an estimate of the bar strength. This taken to be the maximum of the second Fourier mode ($A_{2,\textrm{max}}$) within the bar region (not including spiral arms).
@@ -274,6 +278,128 @@ In Figure~\ref{fig:alpha}, we assumed observational errors of $15\%$ in age and 
   \includegraphics[width=\columnwidth]{fig/obs_error.pdf}
   \caption{The observational errors of the APOKASC2 (left) and ASPCAP dataset (right). We show, on the left, a line indicating a $15\%$ error in observed age and on the right a vertical line indicating a $0.01\,\dex$ error.}
   \label{fig:obs_err}
+\end{figure*}
+
+\section{Random Selection of Subhalos}\label{app:rand_fig1}
+In Figures~\ref{fig:app0} to \ref{fig:app16}, we show a version of Figure~\ref{fig:fig1} but for a random selection of subhalos from our broader sample of 168 Milky Way-progenitors at $z=1.5$ in TNG50. It is from this sample that we selected our SoI. We first show our SoI at $z=1.5$ in Figure~\ref{fig:app0}, and then show our random sample of 16.
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_172175.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for our SoI at $z=1.5$.}
+  \label{fig:app0}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_163071.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app1}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_178140.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app2}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_179009.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app3}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_193025.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app4}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_196834.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app5}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_202467.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app6}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_208267.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app7}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_222555.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app8}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_235345.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app9}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_245661.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app10}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_254663.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app11}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_260347.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app12}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_265671.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app13}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_282632.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app14}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_287601.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app15}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{fig/app_292983.pdf}
+  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
+  \label{fig:app16}
 \end{figure*}
 
 \end{document}
