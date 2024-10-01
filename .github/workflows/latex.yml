@@ -3,7 +3,7 @@ name: Compile LaTeX document with BibTeX
 on:
   push:
     branches:
-      - main    # Change to the branch you want to trigger the action on
+      - main    # Change this to the branch you want to trigger the action on
   pull_request:
     branches:
       - main
@@ -23,7 +23,7 @@ jobs:
         sudo apt-get install -y make
         wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh
         ~/.TinyTeX/bin/*/tlmgr path add
-        sudo apt-get install texlive-latex-extra texlive-fonts-recommended texlive-publishers biber
+        sudo apt-get install texlive-latex-extra texlive-fonts-recommended texlive-publishers texlive-fonts-extra biber
 
     # Step 3: Compile LaTeX and run BibTeX
     - name: Compile LaTeX with BibTeX
