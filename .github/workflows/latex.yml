@@ -1,0 +1,43 @@
+name: Compile LaTeX document with BibTeX
+
+on:
+  push:
+    branches:
+      - main    # You can change this to the branch you want to trigger the action on
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up LaTeX using TinyTeX
+    - name: Set up LaTeX using TinyTeX
+      run: |
+        sudo apt-get install -y make
+        wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh
+        ~/.TinyTeX/bin/*/tlmgr path add
+        sudo apt-get install texlive-latex-extra texlive-fonts-recommended biber
+
+    # Step 3: Compile LaTeX and run BibTeX
+    - name: Compile LaTeX with BibTeX
+      run: |
+        cd paper        # Navigate to the directory containing your .tex file
+        pdflatex ms.tex        # First run to generate the .aux file
+        bibtex ms              # Run BibTeX to process the bibliography
+        pdflatex ms.tex        # Run pdflatex again to include BibTeX references
+        pdflatex ms.tex        # Final pdflatex run to resolve cross-references
+        mv ms.pdf ../          # Move the generated PDF to the root of the repository
+
+    # Step 4: Upload the compiled PDF as an artifact
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: compiled-ms
+        path: ms.pdf
