@@ -39,10 +39,10 @@ jobs:
       run: |
         git config --global user.email "angus.beane@cfa.harvard.edu"
         git config --global user.name "Gus Beane"
-        git clone https://github.com/gusbeane/website.git
-        cd website
-        mkdir -p pdfs/Mgdec
-        cp ../paper/ms.pdf pdfs/Mgdec/ms.pdf
-        git add pdfs/Mgdec/ms.pdf
-        git commit -m "Update ms.pdf"
-        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/gusbeane/website.git main
+        git clone https://github.com/gusbeane/gusbeane.github.io
+        cd gusbeane.github.io
+        mkdir -p drafts/Mgdec
+        cp ../paper/ms.pdf drafts/Mgdec/ms.pdf
+        git add drafts/Mgdec/ms.pdf
+        git commit -m "Update Mgdec draft"
+        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/gusbeane/gusbeane.github.io.git main
