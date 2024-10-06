@@ -1,9 +1,9 @@
-name: Compile LaTeX document with BibTeX
+name: Compile LaTeX document with BibTeX and Deploy to Website
 
 on:
   push:
     branches:
-      - main    # Change this to the branch you want to trigger the action on
+      - main  # Adjust this to match the branch you use in Mgdec
   pull_request:
     branches:
       - main
@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the repository
-    - name: Checkout repository
+    # Step 1: Check out the Mgdec repository
+    - name: Checkout Mgdec repository
       uses: actions/checkout@v3
 
     # Step 2: Set up LaTeX using TinyTeX and install necessary packages
@@ -33,11 +33,16 @@ jobs:
         bibtex ms              # Run BibTeX to process the bibliography
         pdflatex ms.tex        # Run pdflatex again to include BibTeX references
         pdflatex ms.tex        # Final pdflatex run to resolve cross-references
-        mv ms.pdf ../          # Move the generated PDF to the root of the repository
 
-    # Step 4: Upload the compiled PDF as an artifact
-    - name: Upload PDF artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: compiled-ms
-        path: ms.pdf
+    # Step 4: Push the compiled PDF to the website repository
+    - name: Push PDF to website repo
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git clone https://github.com/<your-username>/website.git
+        cd website
+        mkdir -p pdfs/Mgdec
+        cp ../paper/ms.pdf pdfs/Mgdec/ms.pdf
+        git add pdfs/Mgdec/ms.pdf
+        git commit -m "Update ms.pdf"
+        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<your-username>/website.git main
