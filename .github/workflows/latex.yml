@@ -37,12 +37,12 @@ jobs:
     # Step 4: Push the compiled PDF to the website repository
     - name: Push PDF to website repo
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git clone https://github.com/<your-username>/website.git
+        git config --global user.email "angus.beane@cfa.harvard.edu"
+        git config --global user.name "Gus Beane"
+        git clone https://github.com/gusbeane/website.git
         cd website
         mkdir -p pdfs/Mgdec
         cp ../paper/ms.pdf pdfs/Mgdec/ms.pdf
         git add pdfs/Mgdec/ms.pdf
         git commit -m "Update ms.pdf"
-        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/<your-username>/website.git main
+        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/gusbeane/website.git main
