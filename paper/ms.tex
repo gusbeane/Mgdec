@@ -33,6 +33,7 @@
 \newcommand{\rhalf}{\ensuremath{r_{\star,\textrm{half}}}}
 
 \newcommand{\red}[1]{\textcolor{red}{#1}}
+% \linespread{1.8}
 
 % \received{March 1, 2021}
 % \revised{April 1, 2021}
@@ -124,7 +125,34 @@ We make use of two observational data sets. First, we use the ASPCAP DR17 catalo
 We then further considered a dataset of stellar ages from the APOKASC2 catalog \citep{2018ApJS..239...32P}. This catalog uses a combination of APOGEE spectroscopic parameters and \textit{Kepler} time series photometry to compute astroseismic ages. Using only stars with $25\%$ age uncertainties (taken as the maximum of the upper and lower uncertainty), we cross-match this catalog to our larger sample from ASPCAP which results in a sample of 1201 stars.
 
 \subsection{One-Zone Chemical Evolution Model}\label{ssec:onezone_met}
-James inserts his section
+One-zone galactic chemical evolution (GCE) models describe enrichment in an idealized gas reservoir in which newly synthesized metals mix instantaneously (see e.g. the reviews by \citealt{Tinsley1980} and \citealt{Matteucci2021}). Our parameter choices in this paper are based on the models in \citet{2022arXiv220402989C}. While they were interested in bursts of star formation at the transition between the stellar halo and thick disk formation epochs, we focus on smooth evolutionary histories in this paper. We integrate these models numerically using the publicly available {\tt Versatile Integrator for Chemical Evolution} ({\tt VICE}; \citealt{2020MNRAS.498.1364J}).
+
+The quantity that is of particular importance to our results is the star formation efficiency (SFE) timescale $\tau_\star$:
+\begin{equation}
+\tau_\star \equiv \frac{M_{\textrm{gas}}}{\dot{M}_{\textrm{star}}},
+\end{equation}
+where $M_{\textrm{gas}}$ and $\dot{M}_{\textrm{star}}$ are the ISM mass and star formation rate, respectively. This timescale can be equivalently expressed as the ratio of the corresponding surface densities $\Sigma_{\textrm{gas}}$ and $\dot{\Sigma}_{\textrm{star}}$. $\tau_\star$ is the inverse of the SFE itself, describing the rate of star formation per unit mass in the ISM. In principle, $\tau_\star$ should vary with $M_{\textrm{gas}}$ because the observed relation between $\dot{\Sigma}_{\textrm{star}}$ and $\Sigma_{\textrm{gas}}$ is non-linear; classically, $\dot{\Sigma}_{\textrm{star}} \propto \Sigma_{\textrm{gas}}^N$ where $N \approx 1.5$ (e.g. \citealt{Schmidt1959, Kennicutt1998}). For simplicity, we hold $\tau_\star$ constant in this paper, which corresponds to a linear relation. In section 3.5 below, we present models using $\tau_\star = 0.5$, $1$, and $5$ Gyr.
+
+Following \citet{2022arXiv220402989C}, our models assume that there is initially no gas present in the galaxy (i.e. $M_{\textrm{gas}} = 0$ at $t = 0$). Zero metallicity gas accretes at a constant rate of $\dot{M}_\text{in} = 5\,\Msunyr$. The efficiency with which feedback sweeps up ISM material and ejects it to the CGM in an outflow is described by the mass loading factor $\eta \equiv \dot{M}_\text{out} / \dot{M}_\star$. We use $\eta = 2$ throughout this paper (i.e. for every solar mass of stars formed, $2\,\Msun$ of ISM gas is lost to an outflow). These parameter choices lead to an SFH that initially rises from zero and approaches a constant value of $\sim1.9\,\Msunyr$. With these choices, the predicted abundance evolution is insensitive to the overall normalization of the accretion and star formation histories, since a larger accretion rate forms more stars and metals but simultaneously introduces more H into the ISM.
+
+We use the solar abundances of Fe and Mg from \citet{Magg2022} with an additional 0.04 dex to account for the effects of diffusion and gravitational settling (\citealt{Turcotte1998}; i.e. $\{Z_{\text{Fe},\odot}, Z_{\text{Mg},\odot}\} = \{13.7, 6.71\} \times 10^{-4}$). We adopt SN yields of Fe and Mg based on \citeauthor{Weinberg2023}'s \citeyearpar{Weinberg2023} recommendations for Type~II SNe:
+\begin{itemize}
+
+	\item $y_\text{Fe}^\text{II} = 4.73 \times 10^{-4}$
+
+	\item $y_\text{Mg}^\text{II} = 6.52 \times 10^{-4}$
+
+	\item $y_\text{Fe}^\text{Ia} = 12 \times 10^{-4}$
+
+	\item $y_\text{Mg}^\text{Ia} = 0$,
+
+\end{itemize}
+where the subscripts and superscripts denote the element and SN type, respectively. We select this value of $y_\text{Fe}^\text{Ia}$ as it corresponds to $\sim30\%$ ($\sim70\%$) of Fe arising from Type~II (Ia) SNe at solar \FeH{}. These yields are population-averaged, meaning that they quantify the amount of metal production per unit mass of star formation under the given enrichment channel (e.g. a hypothetical $1000\,\Msun$ stellar population would produce a total of $0.652\,\Msun$ of Mg through Type~II SNe). {\tt VICE} models Type~II SNe as exploding instantaneously following an episode of star formation. For Type~Ia SNe, we assume that metals are produced according to the empirically motivated $t^{-1.1}$ power-law based volumetric SN rates as a function of redshift and the cosmic SFH \citep[e.g.][]{Maoz2012}.
+
+We use the yields recommended by \citet{Weinberg2023} because they are based on an empirical determination of the mean $^{56}$Ni yield from Type~II SNe by \citet{Rodriguez2021, Rodriguez2023} applied to multi-element abundance distributions in the Milky Way. Theoretically predicted SN yields \citep[e.g.][]{Seitenzahl2013, Sukhbold2016, Limongi2018, Gronow2021} are subject to substantial theoretical uncertainties. Empirical considerations regarding yields are often necessary for GCE models to make tenable predictions (see also discussion in \citealt{Palla2022}).
+
+With the exception of our SN yields, we find through experimentation that the decline in \MgFe{} with time is most significantly sensitive to the value of $\tau_\star$. We therefore expect its connection to the decline in \MgFe{} on which this paper is focused to be robust. We refer to \citet{2020MNRAS.498.1364J} and \citet{2022arXiv220402989C} for further discussion of these GCE models.
+
 
 \section{Results}\label{sec:results}
 \subsection{Abundance Plane}\label{ssec:plane}
