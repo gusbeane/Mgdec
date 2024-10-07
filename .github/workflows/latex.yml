@@ -17,6 +17,13 @@ jobs:
     - name: Checkout Mgdec repository
       uses: actions/checkout@v3
 
+    # Step 1.1: Exit if not on the main branch
+    - name: Exit if not on main
+      if: github.ref != 'refs/heads/main'
+      run: |
+        echo "Not on the main branch, exiting..."
+        exit 0
+
     # Step 2: Set up LaTeX using TinyTeX and install necessary packages
     - name: Set up LaTeX using TinyTeX
       run: |
