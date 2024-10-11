@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{gensymb}
 \usepackage{enumitem}
+\usepackage{booktabs}
 
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
@@ -37,7 +38,7 @@
 
 \begin{document}
 
-\title{Rising from the Ashes II: Can Bar Formation Lead to Abundance Bimodalities?}
+\title{Rising from the Ashes II: The Bar-driven Abundance Bimodality in the Milky Way}
 
 \author{Angus Beane}
 \affiliation{Center for Astrophysics $|$ Harvard \& Smithsonian, Cambridge, MA, USA}
@@ -58,7 +59,13 @@
 \affiliation{Center for Astrophysics $|$ Harvard \& Smithsonian, Cambridge, MA, USA}
 
 \begin{abstract}
-    The Milky Way hosts at least two modes in its present day distribution of Fe and $\alpha$-elements. The exact cause of this bimodality is disputed, but one class of explanations involves the merger between the Milky Way and a relatively massive satellite (Gaia-Sausage-Enceladus) at $z\sim2$. However, reproducing this bimodality in simulations is not straightforward, with conflicting results on the prevalance, morphology, and mechanism behind multimodality. We present a case study of a galaxy in the Illustris TNG50 simulation which undergoes a sequence of starburst, brief quiescence, and then rejuvenation. Following a minor post-processing adjustment -— motivated by recent findings on the star formation efficiency in TNG -- which increases the \alphaFe{} values of older star particles, we demonstrate that this galaxy exhibits a pronounced bimodal distribution in the \alphaFe{}-\FeH{} plane. The high- and low-$\alpha$ sequences are neatly separated in time by the brief quiescent period. The quiescent period in this galaxy is not associated with a merger but by the formation of a bar followed by AGN activity. This galaxy indicates a novel scenario in which the $\alpha$-bimodality in the Milky Way is caused by AGN-induced quenching triggered by the formation of its bar. We predict that abundance bimodalities should be more common in barred as opposed to unbarred galaxies.
+    The Milky Way hosts at least two modes in its present day distribution of Fe and $\alpha$-elements. The exact cause of this bimodality is disputed, but one class of explanations involves the merger between the Milky Way and a relatively massive satellite (Gaia-Sausage-Enceladus) at $z\sim2$. However, reproducing this bimodality in simulations is not straightforward, with conflicting results on the prevalance, morphology, and mechanism behind multimodality. We present a case study of a galaxy in the Illustris TNG50 simulation which undergoes a sequence of starburst, brief quiescence, and then rejuvenation.
+    
+    Following a minor post-processing adjustment -— motivated by recent findings on the star formation efficiency in TNG -- which increases the \alphaFe{} values of older star particles, we demonstrate that this galaxy exhibits a pronounced bimodal distribution in the \alphaFe{}-\FeH{} plane.
+    
+    This sequence results in a pronounced abundance bimodality after a post-processing adjustment of the \alphaFe{} of old stars which is designed to mimic a higher star formation efficiency in dense gas.
+
+    The high- and low-$\alpha$ sequences are neatly separated in time by the brief quiescent period. The quiescent period in this galaxy is not associated with a merger but by the formation of a bar followed by AGN activity. This galaxy indicates a novel scenario in which the $\alpha$-bimodality in the Milky Way is caused by AGN-induced quenching triggered by the formation of its bar. We predict that abundance bimodalities should be more common in barred as opposed to unbarred galaxies.
   \end{abstract}
     
   \keywords{Classical Novae (251) --- Ultraviolet astronomy(1736) --- History of astronomy(1868) --- Interdisciplinary astronomy(804)}
@@ -87,24 +94,26 @@ We examine the abundance distribution in the \MgFe{}-\FeH{} plane for this sampl
 
 We show the abundance distributions (replicating Figure~\ref{fig:fig1}) of 16 random subhalos from our catalog, and the subhalo we selected, in Appendix~\ref{app:rand_fig1}. Of these subhalos, some structure is present, but none have a strong bimodality as seen in the Milky Way. After the $\alpha$-enhancement, a few have strongly bimodal features: 172175, 178140, 193025.
 
-\begin{table}[htb]
+% Please add the following required packages to your document preamble:
+\begin{table}[]
   \centering
-  \begin{tabular}{ll}
-  \multicolumn{2}{c}{dark matter}                                                                  \\ \hline
-  \multicolumn{1}{l|}{$M_{200}$}                                      & $4.97\times10^{12}\,\Msun$ \\
-  \multicolumn{1}{l|}{$R_{200}$}                                      & $532\,\kpc$                \\
-                                                                      &                            \\
-  \multicolumn{2}{c}{baryons}                                                                      \\ \hline
-  \multicolumn{1}{l|}{$\rhalf$}                                       & $2\,\kpc$                  \\
-  \multicolumn{1}{l|}{$M_{\textrm{star}}(r<4\rhalf)$}                 & $7.6\times10^{12}\,\Msun$  \\
-  \multicolumn{1}{l|}{$M_{\textrm{gas}}(r<4\rhalf)$}                  & $2.6\times10^{11}\,\Msun$  \\
-  \multicolumn{1}{l|}{$\textrm{SFR}$}                                 & $0.56\,\Msunyr$            \\
-  \multicolumn{1}{l|}{$M_{\textrm{BH}}$}                              & $2.9\times10^{8}\,\Msun$   \\
-  \multicolumn{1}{l|}{$\dot{M}_{\textrm{BH}}/\dot{M}_{\textrm{Edd}}$} & $4.5\times10^{-5}$        
+  \begin{tabular}{@{}ll@{}}
+  \toprule
+  \multicolumn{2}{c}{dark matter}                                                  \\ \midrule
+  \multicolumn{1}{l|}{$M_{200}$}                      & $4.97\times10^{12}\,\Msun$ \\
+  \multicolumn{1}{l|}{$R_{200}$}                      & $532\,\kpc$                \\
+                                                      &                            \\
+  \multicolumn{2}{c}{baryons}                                                      \\ \midrule
+  \multicolumn{1}{l|}{$\rhalf$}                       & $2\,\kpc$                  \\
+  \multicolumn{1}{l|}{$M_{\textrm{star}}(r<4\rhalf)$} & $7.6\times10^{12}\,\Msun$  \\
+  \multicolumn{1}{l|}{$M_{\textrm{gas}}(r<4\rhalf)$}  & $2.6\times10^{11}\,\Msun$  \\
+  \multicolumn{1}{l|}{$\textrm{SFR}$}                 & $0.56\,\Msunyr$            \\
+  \multicolumn{1}{l|}{$M_{\textrm{BH}}$}              & $2.9\times10^{8}\,\Msun$   \\
+  $\dot{M}_{\textrm{BH}}/\dot{M}_{\textrm{Edd}}$      & $4.5\times10^{-5}$         \\ \bottomrule
   \end{tabular}
-  \caption{Summary statistics of our subhalo of interest at $z=0$ (392276). $M_{200}$ and $R_{200}$ are relative to the mean density of the universe, the SFR is for all gas bound to the subhalo, and the BH refers to the central BH.}
+  \caption{Summary statistics of our subhalo of interest at $z=0$. $M_{200}$ and $R_{200}$ are relative to the mean density of the universe, the SFR is for all gas bound to the subhalo, and the BH refers to the central BH.}
   \label{tab:summ}
-\end{table}
+  \end{table}
 
 We select subhalo 172175 (the ID at snapshot 40) for its resemblance to the Milky Way. We then studied the main descendant of this subhalo at $z=0$ (subhalo 392276 at snapshot 99). A summary of its key properties is given in Table~\ref{tab:summ}. We refer to this subhalo as our subhalo of interest (SoI).
 
@@ -116,7 +125,7 @@ We then further considered a dataset of stellar ages from the APOKASC-3 catalog 
 \subsection{One-Zone Chemical Evolution Model}\label{ssec:onezone_met}
 One-zone galactic chemical evolution (GCE) models describe enrichment in an idealized gas reservoir in which newly synthesized metals mix instantaneously (see, e.g., the reviews by \citealt{Tinsley1980} and \citealt{Matteucci2021}). Our parameter choices in this paper are based on the models in \citet{2022arXiv220402989C}. While they were interested in bursts of star formation at the transition between the stellar halo and thick disk formation epochs, we focus on smooth evolutionary histories in this paper. We integrate these models numerically using the publicly available {\tt Versatile Integrator for Chemical Evolution} ({\tt VICE}; \citealt{2020MNRAS.498.1364J}).
 
-The quantity of particular importance to our results is the star formation efficiency (SFE) timescale $\tau_\star$:
+The quantity of particular importance to our results is the star formation efficiency (SFE) timescale $\tau_\star$ (also known as the depletion time):
 \begin{equation}
 \tau_\star \equiv \frac{M_{\textrm{gas}}}{\SFR},
 \end{equation}
@@ -217,13 +226,14 @@ At a BH mass of $\sim10^8\,\Msun$, the low-accretion kinetic mode tends to domin
   \label{fig:vice}
 \end{figure}
 
-In Figure~\ref{fig:fig1}, we showed that a time-linear $\alpha$-enhancement of older stars (formed before $z=1.5$) leads to the emergence of a pronounced chemical bimodality. This $\alpha$-enhancement corresponds to a more rapid decline in \alphaFe{} over time at high redshifts. Figure~\ref{fig:vice} suggests that a low SFE at high densities may plausibly explain the absence of a steep decline in \alphaFe{} in the fiducial TNG model.
+In Figure~\ref{fig:fig1}, we showed that a time-linear $\alpha$-enhancement of older stars (formed before $z=1.5$) leads to the emergence of a pronounced chemical bimodality. This $\alpha$-enhancement corresponds to a more rapid decline in \alphaFe{} over time at high redshifts. 
+We demonstrate the physical motivation behind this $\alpha$-enhnacement in Figure~\ref{fig:vice}.
 
 The evolution of \MgFe{} in three one-zone GCE models with varying SFEs is shown in the upper panel of Figure~\ref{fig:vice} (models described in Section~\ref{ssec:onezone_met}). A higher SFE (lower $\tau_\star$) leads to a faster reduction in \MgFe{}. In the model with the highest SFE ($2\,\Gyr^{-1}$, $\tau_\star=0.5\,\Gyr$, blue), \MgFe{} drops from $\sim0.45$ to $0.08\,\dex$ over $2\,\Gyr$. In contrast, the model with the lowest SFE ($0.2\,\Gyr^{-1}$, $\tau_\star=5\,\Gyr$, red) only reaches $\sim0.2\,\dex$ within the same period.
 
 The lower panel shows the negative time derivative of \MgFe{} (i.e., the rate of decline). The model with the highest SFE ($2\,\Gyr^{-1}$, blue) has a peak decline rate of $-0.5\,\dex/\Gyr$, while the model with the lowest SFE ($0.2\,\Gyr^{-1}$) peaks at $-0.25\,\dex/\Gyr$. After $1\,\Gyr$, the trend begins to reverse, and the lower-SFE models catch up, though at a much slower rate ($\sim-0.1\,\dex/\Gyr$) compared to their peak.
 
-This analysis illustrates that a higher SFE at early times (high redshift) leads to a faster decrease in \MgFe{}. Recent work has suggested that the SFE in such dense regions in TNG may indeed be too low, as discussed in Section~\ref{ssec:sfe}.
+This analysis illustrates that a higher SFE at early times (high-$z$) leads to a faster decline in \MgFe{}. Recent work has suggested that the SFE in such dense regions in TNG may indeed be too low, as discussed in Section~\ref{ssec:sfe}. The post-processing $\alpha$-enhancement in Section~\ref{ssec:tng} is meant to mimic a SFE correction of high-$z$ dense gas.
 
 \section{Discussion}\label{sec:disc}
 In Figure~\ref{fig:fig1}, we compared the abundance plane between the Milky Way and our SoI before and after our $\alpha$-enhancement post-processing procedure. It is clear that the TNG SoI is unimodal before the $\alpha$-enhancement and multi-modal afterwards. Here, we briefly discuss two main points: (1) assuming the $\alpha$-enhancement is justified, what leads to the bimodality in the SoI?, and (2) what justifies the $\alpha$-enhancement? We then extend our comparison to data and argue the quiescent period is driven by a bar-induced AGN episode.
