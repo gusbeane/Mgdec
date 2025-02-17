@@ -1,4 +1,4 @@
-\documentclass[twocolumn]{aastex631}
+\documentclass[twocolumn,linenumbers]{aastex631}
 
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -46,7 +46,7 @@
 \author{James W. Johnson}
 \affiliation{Carnegie Science Observatories, Pasadena, CA, USA}
 
-\author{Vadim Semenov}
+\author{Vadim A. Semenov}
 \affiliation{Center for Astrophysics $|$ Harvard \& Smithsonian, Cambridge, MA, USA}
 
 \author{Lars Hernquist}
@@ -160,7 +160,7 @@ With the exception of our SN yields, we find through experimentation that the de
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/392276.pdf}
+  \includegraphics[width=\textwidth]{392276.pdf}
   \caption{\textbf{When old stars are $\alpha$-enhanced, our galaxy from TNG displays a prominent bimodality.} The upper left panel shows the distribution in the \MgFe{}-\FeH{} plane of the Milky Way, demonstrating a clear bimodality (data selection given in text). The lower left panel shows the 1D histograms of \MgFe{} at fixed \FeH{} values of $-0.5$, $-0.25$, $0$, and $0.25$ (blue, orange, green, and red, respectively). In the Milky Way, the bimodality is strongest at low metallicities while disappearing at high metallicities. The middle column shows the same plots but for our TNG galaxy (392276) and with the fixed \FeH{} values $0.25\,\dex$ lower. Only faint structure is seen in the lowest bin (blue, $-0.75\,\dex$). The right column shows the same subhalo but after increasing the \MgFe{} value of star particles formed before $z=1.5$ linearly with formation time (with a slope of $0.1\dex/\Gyr$). A clear bimodality is shown in these panels which, unlike in the Milky Way, is present at all metallicities.}
   \label{fig:fig1}
 \end{figure*}
@@ -175,7 +175,7 @@ Our galaxy, on the other hand, does not show a clearly bimodal structure in the 
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/392276_alpha.pdf}
+  \includegraphics[width=\textwidth]{392276_alpha.pdf}
   \caption{\textbf{Bimodality in the abundance plane is linked to distinct epochs separated by quiescence in simulation.} The upper panels show \MgFe{} as a function of age for our subhalo in TNG. The colors indicate stellar populations at fixed values of \FeH{}, which are the same as in Figure~\ref{fig:fig1}. A gap in the relation occurs at an age of approximately $10.6\,\Gyr$, which we indicate with a vertical dashed line. The effect of the $\alpha$-enhancement is clear, as it separates the stars that form before and after this gap in ages (star particles which formed before $z=1.5$ are $\alpha$-enhanced, which occurs at an age of $\sim9.5\,\Gyr$). The lower panels show on the left the Milky Way and on the center and right the data from TNG but with $12.5\%$ age errors and $0.01\,\dex$ errors in \MgFe{}. When the simulations are given these errors, we see that the before and after star particles smear such that the two populations significantly overlap in ages. In the $\alpha$-enhanced galaxy, two populations emerge in each bin which overlapped in the fiducial distribution. This feature more closely resembles the Milky Way, which displays such populations where the bimodality is strongest -- $\FeH=-0.5$ (blue) and $-0.25$ (orange).}
   \label{fig:alpha}
 \end{figure*}
@@ -193,7 +193,7 @@ The Milky Way distribution (lower left panel) exhibits some similarities to the 
 \subsection{Evolutionary History}\label{ssec:evol}
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{fig/392276_SFH_AGN_M200.pdf}
+  \includegraphics[width=\columnwidth]{392276_SFH_AGN_M200.pdf}
   \caption{\textbf{The evolutionary history of our TNG galaxy.} The left column shows the SFH, BH accretion rate, and virial mass ($M_{200}$) over the entire time span, while the right column zooms in on the period from $t=2\,\Gyr$ to $t=5\,\Gyr$. The vertical dashed line in each panel marks the transition at $t\sim3.2\,\Gyr$, corresponding to the separation between the high- and low-$\alpha$ sequences (as shown in Figure~\ref{fig:alpha}). The upper panel shows the SFH, the middle panel shows the BH accretion rate as a fraction of the Eddington limit, and the lower panel shows the virial mass, representing the mass enclosed within a radius where the density is $200\times$ the mean cosmic density.}
   \label{fig:history}
 \end{figure}
@@ -207,7 +207,7 @@ The lower panel illustrates the growth of the galaxy's virial mass ($M_{200}$). 
 \subsection{Bar-Driven Quenching}\label{ssec:sequence_of_events}
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/alyssa.pdf}
+  \includegraphics[width=\textwidth]{alyssa.pdf}
   \caption{\textbf{Quiescence separating the high- and low-$\alpha$ sequences is preceded by AGN activity associated with bar formation.} Surface density projections of gas (top row) and star particles (middle row) in our galaxy across snapshots at different times during the high- to low-$\alpha$ transition. Below the projections is a plot showing the SFR, BH accretion rate (in units of $\dot{M}_{\textrm{BH}}/\dot{M}_{\textrm{edd}}$), and bar strength ($A_2/A_0$ for $R<2$ kpc). Time ranges from $\sim2.4\,\textrm{Gyr}$ to $\sim3.6\,\textrm{Gyr}$, corresponding to redshifts from $z\sim2.7$ to $z\sim1.8$. A sequence of events in which the bar strengthens, BH accretion increases, and SFR declines is seen, and is described more fully in the text.}
   \label{fig:seq}
 \end{figure*}
@@ -225,7 +225,7 @@ This figure shows the following sequence of events:
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{fig/mgfe_vice.pdf}
+  \includegraphics[width=\columnwidth]{mgfe_vice.pdf}
   \caption{\textbf{A higher star formation efficiency leads to a steeper decline in \MgFe{}.} In both panels, the lines show the time evolution of \MgFe{} in a simple one-zone chemical evolution model, described in Section~\ref{ssec:onezone_met}. The evolution for different SFE values of $2$, $1$, and $0.2\,\textrm{Gyr}^{-1}$ are shown in blue, orange, and red, respectively.  The upper panel shows the evolution of \MgFe{} over $2\,\Gyr$, while the lower panel shows the negative of its time derivative. Increasing the SFE (decreasing $\tau_{\textrm{dep}}$) leads to a more rapid decline in \MgFe{}. At its steepest decline ($t\sim0.5\,\Gyr$), increasing the SFE by an order of magnitude results in a slope nearly twice as steep. At later times ($t > 1\,\Gyr$), models with higher SFE reach their steady-state \MgFe{} value more quickly.}
   \label{fig:vice}
 \end{figure}
@@ -288,7 +288,9 @@ We argue that the reduction in the SFR has two effects which lead to the $\alpha
 This work adds further support to a scenario in which a quiescent period in the Milky Way's past is a plausible explanation for the Milky Way's abundance bimodality. We argued in Paper~I that the GSE merger could trigger this period. In this work we have argued that the formation of the Milky Way's bar could be responsible. Regardless of this scenario's relevance to the Milky Way, we also predict that the presence of a bar in external galaxies is correlated with the presence of an $\alpha$-bimodality.
 
 \begin{acknowledgements}
-  We would like to thank Marc Pinsonneault and Jesse van de Sande for helpful discussions, and M. Piinsonneault for sharing early access to the APOKASC-3 dataset.
+  We would like to thank Marc Pinsonneault and Jesse van de Sande for helpful discussions, and M. Pinsonneault for sharing early access to the APOKASC-3 dataset. AB would like to thank Todd Phillips for helpful discussions.
+
+  JWJ acknowledges support from a Carnegie Theoretical Astrophysics Center postdoctoral fellowship. Support for VS was provided by Harvard University through the Institute for Theory and Computation Fellowship. LH acknowledges support by the Simons Collaboration on ``Learning the Universe.''
 
   This work has made use of data from the European Space Agency (ESA) mission {\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the {\it Gaia} Multilateral Agreement.
   
@@ -361,7 +363,7 @@ In Figure~\ref{fig:alpha}, we assumed observational errors of $12.5\%$ in age an
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\columnwidth]{fig/obs_error.pdf}
+  \includegraphics[width=\columnwidth]{obs_error.pdf}
   \caption{The observational errors of the APOKASC-3 (left) and ASPCAP dataset (right). We show, on the left, a line indicating a $12.5\%$ error in observed age and on the right a vertical line indicating a $0.01\,\dex$ error. On the left, a dashed line indicates the $25\%$ error cut used for inclusion in Figure~\ref{fig:alpha}.}
   \label{fig:obs_err}
 \end{figure*}
@@ -371,119 +373,119 @@ In Figures~\ref{fig:app0} to \ref{fig:app16}, we show a version of Figure~\ref{f
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_172175.pdf}
+  \includegraphics[width=\textwidth]{app_172175.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for our galaxy of interest at $z=1.5$.}
   \label{fig:app0}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_163071.pdf}
+  \includegraphics[width=\textwidth]{app_163071.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app1}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_178140.pdf}
+  \includegraphics[width=\textwidth]{app_178140.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app2}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_179009.pdf}
+  \includegraphics[width=\textwidth]{app_179009.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app3}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_193025.pdf}
+  \includegraphics[width=\textwidth]{app_193025.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app4}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_196834.pdf}
+  \includegraphics[width=\textwidth]{app_196834.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app5}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_202467.pdf}
+  \includegraphics[width=\textwidth]{app_202467.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app6}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_208267.pdf}
+  \includegraphics[width=\textwidth]{app_208267.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app7}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_222555.pdf}
+  \includegraphics[width=\textwidth]{app_222555.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app8}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_235345.pdf}
+  \includegraphics[width=\textwidth]{app_235345.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app9}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_245661.pdf}
+  \includegraphics[width=\textwidth]{app_245661.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app10}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_254663.pdf}
+  \includegraphics[width=\textwidth]{app_254663.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app11}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_260347.pdf}
+  \includegraphics[width=\textwidth]{app_260347.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app12}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_265671.pdf}
+  \includegraphics[width=\textwidth]{app_265671.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app13}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_282632.pdf}
+  \includegraphics[width=\textwidth]{app_282632.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app14}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_287601.pdf}
+  \includegraphics[width=\textwidth]{app_287601.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app15}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{fig/app_292983.pdf}
+  \includegraphics[width=\textwidth]{app_292983.pdf}
   \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
   \label{fig:app16}
 \end{figure*}
