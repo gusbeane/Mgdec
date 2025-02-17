@@ -6,5 +6,13 @@ tmp.vice/
 data/
 
 ms.pdf
+ms.aux
+ms.bbl
+ms.blg
+ms.fdb_latexmk
+ms.fls
+ms.log
+ms.out
+ms.synctex.gz
 
 paper.tar.gz
