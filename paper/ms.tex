@@ -176,7 +176,7 @@ Our galaxy, on the other hand, does not show a clearly bimodal structure in the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{392276_alpha.pdf}
-  \caption{\textbf{Bimodality in the abundance plane is linked to distinct epochs separated by quiescence in simulation.} The upper row shows \MgFe{} as a function of age for our subhalo in TNG. The colors indicate stellar populations at fixed values of \FeH{}, which are the same as in Figure~\ref{fig:fig1}. A gap in the relation occurs at an age of approximately $10.6\,\Gyr$, which we indicate with a vertical dashed line. The effect of the $\alpha$-enhancement is clear, as it separates the stars that form before and after this gap in ages (star particles which formed before $z=1.5$ are $\alpha$-enhanced, which occurs at an age of $\sim9.5\,\Gyr$). \edit1{The middle row shows the same TNG and $\alpha$-enhanced TNG data, but with added uncertainties of $12.5\%$ in age and $0.015\,\dex$ in \MgFe{}.} When given these errors, the before and after star particles smear such that the two populations significantly overlap in ages. \edit1{The lower row shows on the left the Milky Way data and on the right the same TNG data with artificial errors but subsampled to the same number of stars older than $5\,\Gyr$ as in the observations (because the simulation sample has almost no star particles younger than $5\,\Gyr$). The limited sample size of the observations makes a direct comparison difficult.}}
+  \caption{\textbf{Bimodality in the abundance plane is linked to distinct epochs separated by quiescence in simulation.} The upper row shows \MgFe{} as a function of age for our subhalo in TNG. The colors indicate stellar populations at fixed values of \FeH{}, which are the same as in Figure~\ref{fig:fig1}. A gap in the relation occurs at an age of approximately $10.6\,\Gyr$, which we indicate with a vertical dashed line. The effect of the $\alpha$-enhancement is clear, as it separates the stars that form before and after this gap in ages (star particles which formed before $z=1.5$ are $\alpha$-enhanced, which occurs at an age of $\sim9.5\,\Gyr$). \edit1{The middle row shows the same TNG and $\alpha$-enhanced TNG data, but with added uncertainties of $12.5\%$ in age and $0.015\,\dex$ in \MgFe{}.} When given these errors, the before and after star particles smear such that the two populations significantly overlap in ages. \edit1{There is a second population of stars linked to another gap at $\sim8\,\Gyr$, discussed in the text. The lower row shows on the left the Milky Way data and on the right the same TNG data with artificial errors but subsampled to the same number of stars older than $5\,\Gyr$ as in the observations (because the simulation sample has almost no star particles younger than $5\,\Gyr$). The limited sample size of the observations makes a direct comparison difficult.}}
   \label{fig:alpha}
 \end{figure*}
 
@@ -185,6 +185,8 @@ The abundance distributions shown in Figure~\ref{fig:fig1} can be better underst
 In our simulated galaxy, there is an age gap at $\sim10.6\,\Gyr$, which we mark with a vertical dashed line in the upper row. Star particles older than this line have a much clearer gradient in time with \MgFe{} than stars that form after, \edit1{even in the fiducial case}. In the $\FeH=-0.25$ bin, star particles which form directly after this line have a slightly reduced \MgFe{} than stars which form a short time later.
 
 \edit1{In the middle row, the center and right panels show the simulated galaxies with Gaussian errors of $12.5\%$ in age and $0.015\,\dex$ in \MgFe{}, aligning with the observational uncertainties in the APOKASC-3 and APOGEE datasets (see Appendix~\ref{app:obs_err}). The error in \MgFe{} is insignificant, but the age error ($1.25\,\Gyr$ at $10\,\Gyr$) significantly blurs the distribution, particularly across the dashed line that marks the transition between sequences. Despite this, the $\alpha$-enhanced galaxy still shows two distinct populations, although their ages now overlap more significantly.}
+
+\edit1{The upper and middle row shows that there is a potential third population of star particles in the simulation, which is most visible in the $\FeH=-0.25$ and $0\,\dex$ bins (green and red, respectively). A minor gap in the upper panels is present at an age of $\sim8\,\Gyr$, which we discuss further in Section~\ref{ssec:evol}.}
 
 \edit1{The lower row compares Milky Way data (left) with simulations of fiducial (middle) and $\alpha$-enhanced (right) galaxies. Here, the simulations have been subsampled to match the observed sample size of stars older than $5\,\Gyr$ in each metallicity bin. We match the sample size only to old stars because our simulated sample has almost no star particles younger than $5\,\Gyr$. When subsampled with observational errors, the $\FeH=-0.5$ bin in the simulation (orange right panel) very faintly shows a hint of two stacked distributions which might also be present in the $\FeH=-0.25$ bin in the data (orange left panel). The limited sample size makes it impossible to draw any strong conclusions.}
 
@@ -197,6 +199,8 @@ In our simulated galaxy, there is an age gap at $\sim10.6\,\Gyr$, which we mark 
 \end{figure}
 
 To understand the key events driving the behavior around the dashed line in Figure~\ref{fig:alpha}, we examine the evolution of several properties of our galaxy in Figure~\ref{fig:history}: its SFH, the BH accretion rate, and the growth of the virial mass. The vertical dashed line in each panel marks the transition at $t\sim3.2\,\Gyr$ from the high- to low-$\alpha$ sequences, as in Figure~\ref{fig:alpha}. The upper panel in the left column shows the the SFR (computed for all gas cells in the galaxy). There are two peaks at $t\sim2.5\,\Gyr$ and $t\sim4.5\,\Gyr$ with maximum values of $50\,\Msun/\textrm{yr}$ and $30\,\Msun/\textrm{yr}$, respectively. Around the high- to low-$\alpha$ transition, there is a dip in the SFR, which drops by an order of magnitude to about $3\,\Msun/\textrm{yr}$. The right panel zooms in on the period between $t=2\,\Gyr$ and $5\,\Gyr$, where we observe a sharp recovery in the SFR following the quiescent phase. In the span of a single snapshot (roughly $150\,\Myr$), the SFR increases from about $3\,\Msun/\textrm{yr}$ to $10\,\Msun/\textrm{yr}$.
+
+\edit1{There is also a more minor period of quiescence at a cosmic time of $\sim6\,\Gyr$, followed by a period of SF at a much lower rate. This is likely linked to the third population separated by an age gap at $\sim8\,\Gyr$ seen in Figure~\ref{fig:alpha}.}
 
 The middle panels track the accretion rate of the central BH as a fraction of the Eddington rate. Early in our galaxy's history ($t<2\,\Gyr$), the BH experiences high accretion, which steadily declines until $t\sim5\,\Gyr$. Around $t\sim3.2\,\Gyr$, the BH accretion rate peaks again, reaching approximately $30\%$ of the Eddington limit, placing the BH in quasar mode and injecting significant thermal energy into the galaxy's center. The middle right panel shows the period between $t=2$ and $5\,\Gyr$. We can see that the decline in the galaxy's SFR is contemperaneous with this increase in the BH accretion rate.
 
@@ -274,7 +278,7 @@ There is a significant body of theoretical and observational work in support of 
 
 Since barred galaxies preferentially host AGN, we therefore predict that barred galaxies would preferentially host $\alpha$-bimodalities. The GECKOS survey, which aims to constrain the $\alpha$-bimodality of a sample of edge-on galaxies, about half of which are barred, using integral field spectroscopy at different altitudes, could test this \citep[and J. v.~d.~Sande, private communication]{2024IAUS..377...27V}. On the other hand, the strength of a bar is not associated with the strength of the host AGN \citep[e.g.]{2022A&A...661A.105S}. So, it is not clear that bimodalities would be associated with bar strength.
 
-A complicating factor for this picture comes from the high SFR associated with the galaxy. The depletion time ($M_{\textrm{gas}}/\textrm{SFR}$) at the $t=2.84\,\Gyr$ snapshot is $204\,\Myr$, shorter than the time it takes for the SFR to reach its minimum. This implies the possibility of starvation as a quenching mechanism. However, the average depletion time in the preceding 5 snapshots (which are each $\sim150\,\Myr$ apart) is $220\,\Myr$, so clearly the galaxy is accreting high amounts of gas from its environment. A definitive account, difficult with the current simulation outputs because of its sparse snapshot spacing, requires further work.
+A complicating factor for this picture comes from the high SFR associated with the galaxy. The depletion time ($M_{\textrm{gas}}/\textrm{SFR}$) at the $t=2.84\,\Gyr$ snapshot is $204\,\Myr$, shorter than the time it takes for the SFR to reach its minimum. This implies the possibility of starvation as a quenching mechanism. However, the average depletion time in the preceding 5 snapshots (which are each $\sim150\,\Myr$ apart) is $220\,\Myr$, so clearly the galaxy is accreting high amounts of gas from its environment. A definitive account, difficult with the current simulation outputs because of its sparse snapshot spacing, requires further work. \edit1{We also delay to future work the cause of the secondary quiescence period at $\sim6\,\Gyr$, briefly discussed in Section~\ref{ssec:evol}.}
 
 \section{Conclusions}\label{sec:conc}
 In this work, we examined a galaxy in Illustris TNG50 which is at a Milky Way-progenitor mass at $z=1.5$. After applying a post-processing step that increased the \MgFe{} of star particles formed before $z=1.5$, this subhalo hosts a strong bimodality in the plane of \MgFe{} and \FeH{}, shown in Figure~\ref{fig:fig1}. This post-processing is justified by arguing that the SFE of dense gas is too low in TNG \citep[][see discussion in our Section~\ref{ssec:sfe}]{2024arXiv240909121H}.
@@ -371,121 +375,138 @@ In Figures~\ref{fig:app0} to \ref{fig:app16}, we show a version of Figure~\ref{f
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{app_172175.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for our galaxy of interest at $z=1.5$.}
+  \includegraphics[width=\textwidth]{app_392276.pdf}
+  \caption{The abundance plane made in a manner similar to Figure~\ref{fig:fig1}. We show }
   \label{fig:app0}
 \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_163071.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app1}
-\end{figure*}
+\figsetstart
+\figsetnum{7}
+\figsettitle{Abundance plane for a random subset of sample galaxies in this work.}
+\figsetgrpstart
+\figsetgrpnum{7.1}
+\figsetgrptitle{Abundance plane for subhalo 392276.}
+\figsetplot{app_172175.pdf}
+\figsetgrpnote{Abundance plane for subhalo 392276.}
+\figsetgrpend
+\figsetgrpstart
+\figsetgrpnum{7.1}
+\figsetgrptitle{Abundance plane for subhalo 172175.}
+\figsetplot{app_172175.pdf}
+\figsetgrpnote{Abundance plane for subhalo 172175.}
+\figsetgrpend
+\figsetend
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_178140.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app2}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_2.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app1}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_179009.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app3}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_10.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app2}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_193025.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app4}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_143882.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app3}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_196834.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app5}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_167392.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app4}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_202467.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app6}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_289388.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app5}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_208267.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app7}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_300903.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app6}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_222555.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app8}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_348901.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app7}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_235345.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app9}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_398784.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app8}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_245661.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app10}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_404818.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app9}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_254663.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app11}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_425719.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app10}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_260347.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app12}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_439099.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app11}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_265671.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app13}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_465255.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app12}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_282632.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app14}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_494709.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app13}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_287601.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app15}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_510273.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app14}
+% \end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{app_292983.pdf}
-  \caption{The same as Figure~\ref{fig:fig1}, but for a random subhalo from our catalog at $z=1.5$.}
-  \label{fig:app16}
-\end{figure*}
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_547293.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app15}
+% \end{figure*}
+
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{app_576516.pdf}
+%   \caption{The same as Figure~\ref{fig:app0}, but for a random galaxy from our initial catalog.}
+%   \label{fig:app16}
+% \end{figure*}
 
 \end{document}
