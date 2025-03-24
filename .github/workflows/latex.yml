@@ -3,53 +3,48 @@ name: Compile LaTeX document with BibTeX and Deploy to Website
 on:
   push:
     branches:
-      - main  # Adjust this to match the branch you use in Mgdec
+      - '**'        # Run on all branches
   pull_request:
     branches:
-      - main
+      - '**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the Mgdec repository
-    - name: Checkout Mgdec repository
-      uses: actions/checkout@v3
+      # Step 1: Check out the Mgdec repository
+      - name: Checkout Mgdec repository
+        uses: actions/checkout@v3
 
-    # Step 1.1: Exit if not on the main branch
-    - name: Exit if not on main
-      if: github.ref != 'refs/heads/main'
-      run: |
-        echo "Not on the main branch, exiting..."
-        exit 0
+      # Step 2: Set up LaTeX using TinyTeX and install necessary packages
+      - name: Set up LaTeX using TinyTeX
+        run: |
+          sudo apt-get install -y make
+          wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh
+          ~/.TinyTeX/bin/*/tlmgr path add
+          sudo apt-get install texlive-latex-extra texlive-fonts-recommended texlive-publishers texlive-fonts-extra biber
 
-    # Step 2: Set up LaTeX using TinyTeX and install necessary packages
-    - name: Set up LaTeX using TinyTeX
-      run: |
-        sudo apt-get install -y make
-        wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sh
-        ~/.TinyTeX/bin/*/tlmgr path add
-        sudo apt-get install texlive-latex-extra texlive-fonts-recommended texlive-publishers texlive-fonts-extra biber
+      # Step 3: Compile LaTeX and run BibTeX
+      - name: Compile LaTeX with BibTeX
+        run: |
+          cd paper        # Navigate to the directory containing your .tex file
+          pdflatex ms.tex        # First run to generate the .aux file
+          bibtex ms              # Run BibTeX to process the bibliography
+          pdflatex ms.tex        # Run pdflatex again to include BibTeX references
+          pdflatex ms.tex        # Final pdflatex run to resolve cross-references
 
-    # Step 3: Compile LaTeX and run BibTeX
-    - name: Compile LaTeX with BibTeX
-      run: |
-        cd paper        # Navigate to the directory containing your .tex file
-        pdflatex ms.tex        # First run to generate the .aux file
-        bibtex ms              # Run BibTeX to process the bibliography
-        pdflatex ms.tex        # Run pdflatex again to include BibTeX references
-        pdflatex ms.tex        # Final pdflatex run to resolve cross-references
-
-    # Step 4: Push the compiled PDF to the website repository
-    - name: Push PDF to website repo
-      run: |
-        git config --global user.email "angus.beane@cfa.harvard.edu"
-        git config --global user.name "Gus Beane"
-        git clone https://github.com/gusbeane/gusbeane.github.io
-        cd gusbeane.github.io
-        mkdir -p drafts/Mgdec
-        cp ../paper/ms.pdf drafts/Mgdec/ms.pdf
-        git add drafts/Mgdec/ms.pdf
-        git commit -m "Update Mgdec draft"
-        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/gusbeane/gusbeane.github.io.git main
+      # Step 4: Push the compiled PDF to the website repository in a branch-specific folder
+      - name: Push PDF to website repo
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git config --global user.email "angus.beane@cfa.harvard.edu"
+          git config --global user.name "Gus Beane"
+          git clone https://github.com/gusbeane/gusbeane.github.io
+          cd gusbeane.github.io
+          mkdir -p drafts/Mgdec/$BRANCH
+          cp ../paper/ms.pdf drafts/Mgdec/$BRANCH/ms.pdf
+          git add drafts/Mgdec/$BRANCH/ms.pdf
+          git commit -m "Update Mgdec draft for branch $BRANCH"
+          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/gusbeane/gusbeane.github.io.git main
